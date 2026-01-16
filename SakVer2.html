@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>SAKSARATA: TELERONA 2026 | Festival Musikaliterasi Sekolah</title>
+    
+    <!-- Fonts -->
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,500,600,700&f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="Assets/saksa.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="SakVer2.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="is-loading">
+
+    <!-- Skip to Content Link (Accessibility) -->
+    <a href="#main-content" class="skip-to-content">Skip to Content</a>
+
+    <!-- Noise Overlay -->
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <!-- NEW LOADER (From WebSaksa) -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loader-container">
+            <div class="stage"></div>
+            <div class="character-box">
+                <img id="loaderImage" src="Assets/5.png" 
+                     alt="Karakter SAKSARATA" class="character-img">
+                <div class="floating-notes">
+                    <div class="note-anim" style="--x: -50px; --y: -100px; animation-delay: 0s;">&#9835;</div>
+                    <div class="note-anim" style="--x: 60px; --y: -80px; animation-delay: 0.5s;">&#9833;</div>
+                    <div class="note-anim" style="--x: -40px; --y: -120px; animation-delay: 1s;">&#9836;</div>
+                    <div class="note-anim" style="--x: 50px; --y: -110px; animation-delay: 1.5s;">&#9834;</div>
+                </div>
+            </div>
+            <div class="staff-mini">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div class="loading-text">Sedang Bersenandung...</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="#home" class="logo" aria-label="SAKSARATA - Kembali ke beranda">
+                <span class="logo-text">SAKSA<span class="accent">RATA</span></span>
+            </a>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainMenu">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+
+            <!-- Fullscreen Navigation -->
+            <nav class="fullscreen-menu" id="mainMenu" aria-label="Main navigation">
+                <div class="menu-bg" aria-hidden="true"></div>
+                <ul class="menu-items">
+                    <li><a href="#home" class="menu-link">Beranda<span class="menu-num">01</span></a></li>
+                    <li><a href="#tentang" class="menu-link">Tentang<span class="menu-num">02</span></a></li>
+                    <li><a href="#acara" class="menu-link">Acara<span class="menu-num">03</span></a></li>
+                    <li><a href="#guest-star" class="menu-link">Guest Star<span class="menu-num">04</span></a></li>
+                    <li><a href="#juknis" class="menu-link">Juknis<span class="menu-num">05</span></a></li>
+                    <li><a href="#galeri" class="menu-link">Galeri<span class="menu-num">06</span></a></li>
+                    <li><a href="#kontak" class="menu-link">Kontak<span class="menu-num">07</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-particles" id="particles-js" aria-hidden="true"></div>
+        <div class="hero-bg-text" data-speed="0.15" aria-hidden="true">SAKSARATA</div>
+        <div class="container hero-container" id="main-content">
+            <div class="hero-content">
+                <div class="hero-label fade-in-up">Festival Musikaliterasi Vol. 3</div>
+                <h1 class="hero-title" id="hero-title">
+                    <span class="line-1">SAKSARATA</span>
+                    <span class="line-2">TELERONA</span>
+                    <span class="line-3">2026</span>
+                </h1>
+                <p class="hero-desc fade-in-up delay-1">
+                    Perpaduan harmonis antara musik dan literasi dalam sebuah perayaan kreativitas dan pengetahuan. 
+                    Wadah ekspresi generasi muda melalui seni dan budaya.
+                </p>
+                
+                <div class="hero-cta fade-in-up delay-2">
+                    <a href="#acara" class="btn-primary">
+                        <span class="btn-text">JELAJAHI ACARA</span>
+                        <span class="btn-fill"></span>
+                        <i class="fas fa-arrow-right btn-icon"></i>
+                    </a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRGxZCqWz974NGdy13WUiQNd2EVRNXGTm7j17jfOJpITjw-A/viewform" 
+                       target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                        <span class="btn-text">DAFTAR SEKARANG</span>
+                        <span class="btn-glow"></span>
+                    </a>
+                    <div class="scroll-indicator" aria-hidden="true">
+                        <div class="mouse"><div class="wheel"></div></div>
+                        <span>Scroll untuk eksplorasi</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="vinyl-container">
+                    <div class="vinyl-record" id="vinylRecord">
+                        <div class="vinyl-groove"></div>
+                        <div class="vinyl-groove"></div>
+                        <div class="vinyl-groove"></div>
+                        <div class="vinyl-label">
+                            <img src="Assets/saksa.jpg" 
+                                 alt="Logo SAKSARATA" loading="lazy" width="200" height="200">
+                        </div>
+                        <div class="vinyl-center"></div>
+                    </div>
+                    <div class="vinyl-sleeve">
+                        <img src="Assets/5.png" 
+                             alt="Cover Art" class="sleeve-img" loading="lazy" width="400" height="400">
+                        <div class="sleeve-glow"></div>
+                    </div>
+                    <div class="vinyl-light" aria-hidden="true"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="floating-elements" aria-hidden="true">
+            <div class="floating-note">♪</div>
+            <div class="floating-note">♫</div>
+            <div class="floating-note">♬</div>
+            <div class="floating-book">📖</div>
+            <div class="floating-microphone">🎤</div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-strip" aria-hidden="true">
+        <div class="marquee-content">
+            <span>• SASTRA • MUSIK • SENI • BUDAYA • SAKSARATA • TELERONA • 2026 • BANDUNG •</span>
+            <span>• SASTRA • MUSIK • SENI • BUDAYA • SAKSARATA • TELERONA • 2026 • BANDUNG •</span>
+        </div>
+    </div>
+
+    <!-- Tentang Section -->
+    <section id="tentang" class="section about-section" aria-labelledby="tentang-title">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">TENTANG</span>
+                <h2 class="section-title" id="tentang-title">SAKSARATA<br>TELERONA</h2>
+                <p class="section-subtitle">Mengenal lebih dalam tentang acara Musikaliterasi kami</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-text" data-aos="fade-right">
+                    <p class="lead-text">Perpaduan Unik Musik dan Literasi</p>
+                    <p>SAKSARATA hadir sebagai festival literasi yang mengajak generasi muda untuk melihat literasi secara lebih luas dan bermakna.</p>
+                    <p>Tidak hanya tentang membaca dan menulis, SAKSARATA merangkul budaya, seni, sejarah, dan kearifan lokal Nusantara sebagai bagian penting dari proses belajar dan berekspresi.</p>
+                    <p>Melalui berbagai ruang kreatif dan kolaboratif, SAKSARATA mendorong generasi muda untuk merawat tradisi sekaligus menghadirkannya kembali secara relevan di masa kini.</p>
+                    
+                    <ul class="about-list">
+                        <li><i class="fas fa-star-of-life" aria-hidden="true"></i> <span>Ruang Ekspresi Tanpa Batas</span></li>
+                        <li><i class="fas fa-star-of-life" aria-hidden="true"></i> <span>Kurasi Seni Berkualitas</span></li>
+                        <li><i class="fas fa-star-of-life" aria-hidden="true"></i> <span>Pelestarian Budaya Nusantara</span></li>
+                        <li><i class="fas fa-star-of-life" aria-hidden="true"></i> <span>Pendidikan Melalui Pengalaman</span></li>
+                        <li><i class="fas fa-star-of-life" aria-hidden="true"></i> <span>Komunitas yang Inklusif</span></li>
+                    </ul>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-static">3</span>
+                            <span class="stat-text">Tahun Berjalan</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-static">500+</span>
+                            <span class="stat-text">Peserta</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-static">15+</span>
+                            <span class="stat-text">Sekolah</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="visual-card">
+                        <img src="Assets/about.jpg" 
+                             alt="Atmosphere SAKSARATA" loading="lazy" width="800" height="800">
+                        <div class="card-frame"></div>
+                        <div class="card-shine"></div>
+                    </div>
+                    <div class="visual-dots" aria-hidden="true">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Acara & Lomba Section -->
+    <section id="acara" class="section lineup-section" aria-labelledby="acara-title">
+        <div class="acara-bg-pattern" aria-hidden="true"></div>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">ACARA & LOMBA</span>
+                <h2 class="section-title" id="acara-title">KOMPETISI KREATIF</h2>
+                <p class="section-subtitle">Berbagai kegiatan menarik yang bisa Anda ikuti</p>
+            </div>
+            
+            <div class="artist-grid">
+                <!-- Acara 1: Saksarata Got Talent -->
+                <article class="artist-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="artist-badge">Populer</div>
+                    <div class="artist-img-wrapper">
+                        <img src="Assets/sgt.jpg" 
+                             alt="Saksarata Got Talent" loading="lazy" width="600" height="600" class="artist-img">
+                        <div class="artist-glow"></div>
+                        <div class="artist-overlay">
+                            <h3 class="artist-name">Saksarata Got Talent</h3>
+                            <p class="artist-role">Kompetisi Bakat</p>
+                            <div class="artist-tags">
+                                <span class="tag">Performance</span>
+                                <span class="tag">Bakat</span>
+                                <span class="tag">Kreativitas</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artist-info">
+                        <p class="artist-quote">"Wadah apresiasi bakat seni dan kreativitas peserta dengan penekanan pada keunikan dan kemampuan tampil."</p>
+                        <div class="artist-details">
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>Tim</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Acara 2: Aksara Sunda -->
+                <article class="artist-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="artist-badge">Budaya</div>
+                    <div class="artist-img-wrapper">
+                        <img src="Assets/aksara.jpg" 
+                             alt="Aksara Sunda" loading="lazy" width="600" height="600" class="artist-img">
+                        <div class="artist-glow"></div>
+                        <div class="artist-overlay">
+                            <h3 class="artist-name">Aksara Sunda</h3>
+                            <p class="artist-role">Pelestarian Budaya</p>
+                            <div class="artist-tags">
+                                <span class="tag">Budaya</span>
+                                <span class="tag">Tradisi</span>
+                                <span class="tag">Literasi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artist-info">
+                        <p class="artist-quote">"Sarana pelestarian budaya literasi daerah dengan penekanan pada ketepatan penulisan dan pemahaman makna."</p>
+                        <div class="artist-details">
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>Individu</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Acara 3: Cipta Cerpen -->
+                <article class="artist-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="artist-badge">Sastra</div>
+                    <div class="artist-img-wrapper">
+                        <img src="Assets/cippen.jpg" 
+                             alt="Cipta Cerpen" loading="lazy" width="600" height="600" class="artist-img">
+                        <div class="artist-glow"></div>
+                        <div class="artist-overlay">
+                            <h3 class="artist-name">Cipta Cerpen</h3>
+                            <p class="artist-role">Kompetisi Menulis</p>
+                            <div class="artist-tags">
+                                <span class="tag">Menulis</span>
+                                <span class="tag">Kreativitas</span>
+                                <span class="tag">Cerita</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artist-info">
+                        <p class="artist-quote">"Berfokus pada kemampuan merangkai cerita pendek secara utuh dengan penekanan pada orisinalitas ide dan alur naratif."</p>
+                        <div class="artist-details">
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>Individu</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Acara 4: Cipta Puisi -->
+                <article class="artist-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="artist-badge">Puisi</div>
+                    <div class="artist-img-wrapper">
+                        <img src="Assets/cipta.jpg" 
+                             alt="Cipta Puisi" loading="lazy" width="600" height="600" class="artist-img">
+                        <div class="artist-glow"></div>
+                        <div class="artist-overlay">
+                            <h3 class="artist-name">Cipta Puisi</h3>
+                            <p class="artist-role">Kompetisi Puisi</p>
+                            <div class="artist-tags">
+                                <span class="tag">Puisi</span>
+                                <span class="tag">Sastra</span>
+                                <span class="tag">Ekspresi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artist-info">
+                        <p class="artist-quote">"Menitikberatkan pada kreativitas bahasa, kekuatan makna, dan keutuhan karya sastra."</p>
+                        <div class="artist-details">
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>Individu</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Acara 5: Mendongeng -->
+                <article class="artist-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="artist-badge">Mendongeng</div>
+                    <div class="artist-img-wrapper">
+                        <img src="Assets/dongeng.jpg" 
+                             alt="Mendongeng" loading="lazy" width="600" height="600" class="artist-img">
+                        <div class="artist-glow"></div>
+                        <div class="artist-overlay">
+                            <h3 class="artist-name">Mendongeng</h3>
+                            <p class="artist-role">Kompetisi Mendongeng</p>
+                            <div class="artist-tags">
+                                <span class="tag">Dongeng</span>
+                                <span class="tag">Ekspresi</span>
+                                <span class="tag">Intonasi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artist-info">
+                        <p class="artist-quote">"Menampilkan emosi dan kreativitas melalui cerita yang diceritakan dengan penuh ekspresi."</p>
+                        <div class="artist-details">
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>Individu</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="acara-cta" data-aos="fade-up">
+                <div class="cta-content">
+                    <h3>Siap Menunjukkan Bakatmu?</h3>
+                    <p>Daftarkan dirimu sekarang dan jadilah bagian dari perayaan kreativitas terbesar!</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRGxZCqWz974NGdy13WUiQNd2EVRNXGTm7j17jfOJpITjw-A/viewform" 
+                       target="_blank" rel="noopener noreferrer" class="btn-cta-large">
+                        <span class="btn-text">DAFTAR SEKARANG</span>
+                        <span class="btn-sparkles">
+                            <i class="fas fa-sparkle"></i>
+                            <i class="fas fa-sparkle"></i>
+                            <i class="fas fa-sparkle"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUEST STAR SECTION - NEW -->
+    <section id="guest-star" class="section guest-star-section" aria-labelledby="guest-star-title">
+        <div class="guest-star-bg">
+            <div class="stage-lights" aria-hidden="true">
+                <div class="light-beam"></div>
+                <div class="light-beam"></div>
+                <div class="light-beam"></div>
+            </div>
+            <div class="confetti-container" aria-hidden="true"></div>
+        </div>
+        
+        <div class="container">
+            <div class="section-header center" data-aos="fade-up">
+                <span class="section-tag">BINTANG TAMU</span>
+                <h2 class="section-title" id="guest-star-title">STAR PERFORMANCE</h2>
+                <p class="section-subtitle">Penampilan spesial dari bintang-bintang ternama yang akan menghibur Anda</p>
+            </div>
+            
+            <!-- Main Guest Star -->
+            <div class="main-guest" data-aos="zoom-in">
+                <div class="main-guest-card">
+                    <div class="main-guest-image">
+                        <img src="Assets/Aruma.jpg" 
+                             alt="Guest Star Utama" loading="lazy" width="800" height="1000">
+                        <div class="main-guest-glow"></div>
+                        <div class="main-guest-frame"></div>
+                        <div class="main-guest-crown">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                    </div>
+                    <div class="main-guest-info">
+                        <div class="guest-badge">Headliner</div>
+                        <h3 class="guest-name">ARUMA</h3>
+                        <p class="guest-title">Penyanyi & Artis Indonesia</p>
+                        <div class="guest-stats">
+                            <div class="guest-stat">
+                                <i class="fas fa-music"></i>
+                                <span>Pop</span>
+                            </div>
+                            <div class="guest-stat">
+                                <i class="fas fa-trophy"></i>
+                                <span>AMI Award</span>
+                            </div>
+                            <div class="guest-stat">
+                                <i class="fas fa-users"></i>
+                                <span>2M+ Monthly Listeners</span>
+                            </div>
+                        </div>
+                        <p class="guest-description">
+                            Penyanyi berbakat dengan suara merdu yang telah merilis berbagai hits populer. 
+                            Akan membawakan penampilan spesial dengan lagu-lagu terbaiknya.
+                        </p>
+                        <div class="guest-showtime">
+                            <i class="fas fa-clock"></i>
+                            <span>Penampilan: 16.55 - 18.05 WIB</span>
+                        </div>
+                        <div class="guest-social">
+                            <a href="https://www.instagram.com/arumands/" target="_blank" class="social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://youtube.com/@arumands?si=EMnYB26hlzMjLG2V" target="_blank" class="social-link" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://open.spotify.com/artist/7G0kstl7VjhDSgFYOBaUS1?si=qtNgVCR0S9OY2ZU-48VAdg" target="_blank" class="social-link" aria-label="Spotify">
+                                <i class="fab fa-spotify"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Other Guest Stars -->
+            <div class="guest-grid">
+                <!-- Guest 1 -->
+                <article class="guest-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="guest-card-inner">
+                        <div class="guest-image">
+                            <img src="Assets/Pidi Baiq.jpeg" 
+                                 alt="Band Indie" loading="lazy" width="400" height="400">
+                            <div class="guest-overlay">
+                                <a href="https://www.instagram.com/reel/DTcqk7yAdFS/?igsh=MXFlbTA4YjBmeDFkNA==" target="_blank" class="guest-play-btn" aria-label="Play preview">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="guest-info">
+                            <h4 class="guest-name-sm">PIDI BAIQ</h4>
+                            <p class="guest-role-sm">Writer</p>
+                            <div class="guest-tags">
+                                <span class="guest-tag">Novel</span>
+                                <span class="guest-tag">Musician</span>
+                            </div>
+                            <div class="guest-time">
+                                <i class="fas fa-clock"></i>
+                                <span>13.30 - 14.30 WIB</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Guest 2 -->
+                <article class="guest-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="guest-card-inner">
+                        <div class="guest-image">
+                            <img src="Assets/PlayGround.jpeg" 
+                                 alt="DJ Performance" loading="lazy" width="400" height="400">
+                            <div class="guest-overlay">
+                                <a href="https://www.instagram.com/reel/DTcqk7yAdFS/?igsh=MXFlbTA4YjBmeDFkNA==" target="_blank" class="guest-play-btn" aria-label="Play preview">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="guest-info">
+                            <h4 class="guest-name-sm">PLAYGROUND MUSIC</h4>
+                            <p class="guest-role-sm">Electronic DJ</p>
+                            <div class="guest-tags">
+                                <span class="guest-tag">EDM</span>
+                                <span class="guest-tag">House</span>
+                            </div>
+                            <div class="guest-time">
+                                <i class="fas fa-clock"></i>
+                                <span>17.05 - 17.35 WIB</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Guest 3 -->
+                <article class="guest-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="guest-card-inner">
+                        <div class="guest-image">
+                            <img src="Assets/ej.png" 
+                                 alt="EJ PEACE" loading="lazy" width="400" height="400">
+                            <div class="guest-overlay">
+                                <a href="https://www.instagram.com/reel/DThh6CMgbPH/?igsh=cWlla3NucnM4MDRx" target="_blank" class="guest-play-btn" aria-label="Play preview">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="guest-info">
+                            <h4 class="guest-name-sm">EJ PEACE</h4>
+                            <p class="guest-role-sm">Comedian & Musician</p>
+                            <div class="guest-tags">
+                                <span class="guest-tag">Jokes</span>
+                                <span class="guest-tag">Symphony</span>
+                            </div>
+                            <div class="guest-time">
+                                <i class="fas fa-clock"></i>
+                                <span>17.35 - 18.05 WIB</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <!-- Guest Star Schedule -->
+            <div class="schedule-container" data-aos="fade-up">
+                <h3 class="schedule-title">JADWAL PENAMPILAN</h3>
+                <div class="schedule-timeline">
+                    <div class="schedule-item">
+                        <div class="schedule-time">13:30 - 14:30</div>
+                        <div class="schedule-act">PIDI BAIQ</div>
+                        <div class="schedule-stage">Panggung Utama</div>
+                    </div>
+                    <div class="schedule-item highlight">
+                        <div class="schedule-time">16:55 - 18:05</div>
+                        <div class="schedule-act">ARUMA</div>
+                        <div class="schedule-stage">Panggung Utama</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">17:05 - 17:35</div>
+                        <div class="schedule-act">PLAYGROUND MUSIC</div>
+                        <div class="schedule-stage">Panggung Utama</div>
+                    </div>
+                    <div class="schedule-item highlight">
+                        <div class="schedule-time">17:35 - 18:05</div>
+                        <div class="schedule-act">EJ PEACE</div>
+                        <div class="schedule-stage">Panggung Utama</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Juknis Section -->
+    <section id="juknis" class="section process-section" aria-labelledby="juknis-title">
+        <div class="container">
+            <div class="section-header center" data-aos="fade-up">
+                <span class="section-tag">PETUNJUK TEKNIS</span>
+                <h2 class="section-title" id="juknis-title">PANDUAN LENGKAP</h2>
+                <p class="section-subtitle">Panduan lengkap untuk mengikuti acara Saksarata</p>
+            </div>
+            
+            <div class="process-timeline">
+                <!-- Step 1: Saksarata Got Talent -->
+                <article class="process-step" data-aos="fade-right">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Saksarata Got Talent</h3>
+                        <p>Kompetisi unjuk bakat dengan penekanan pada keunikan dan kemampuan tampil. Ekspresikan kreativitas tanpa batas dalam berbagai bidang seni. Peserta dapat menampilkan bakat dalam musik, tari, sulap, stand-up comedy, atau pertunjukan lainnya.</p>
+                        <div class="step-requirements">
+                            <h4>Persyaratan:</h4>
+                            <ul>
+                                <li>Tampilkan bakat apa pun dalam video maksimal 10 menit</li>
+                                <li>Kategori band, tari, dan vokal memiliki aturan durasi dan lagu khusus</li>
+                                <li>Peserta terpilih akan audisi langsung di sekolah dengan fasilitas alat musik tertentu</li>
+                                <li>Video wajib diunggah ke Instagram dengan tag akun yang ditentukan</li>
+                            </ul>
+                        </div>
+                        <div class="step-images">
+                            <div class="step-image">
+                                <img src="Assets/DSCF3781.JPG" 
+                                     alt="Performance" loading="lazy" width="400" height="300">
+                            </div>
+                            <div class="step-image">
+                                <img src="Assets/DSCF6037.JPG" 
+                                     alt="Audience" loading="lazy" width="400" height="300">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Step 2: Aksara Sunda -->
+                <article class="process-step" data-aos="fade-left">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Aksara Sunda</h3>
+                        <p>Lomba penggunaan Aksara Sunda dengan penekanan pada ketepatan penulisan dan pemahaman makna. Lestarikan budaya melalui aksara tradisional. Peserta akan dinilai berdasarkan keakuratan penulisan, kelengkapan, dan keindahan tulisan.</p>
+                        <div class="step-requirements">
+                            <h4>Persyaratan:</h4>
+                            <ul>
+                                <li>KHUSUS INTERNAL SMAN 23 BANDUNG</li>
+                                <li>Buat kaligrafi aksara Sunda bertema budaya Nusantara</li>
+                                <li>Kembangkan desain artistik dengan motif etnik Sunda</li>
+                                <li>Pastikan aksara Sunda ditulis benar sesuai kaidah</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="step-images">
+                            <div class="step-image">
+                                <img src="Assets/aks.jpeg" 
+                                     alt="Aksara" loading="lazy" width="400" height="300">
+                            </div>
+                            <div class="step-image">
+                                <img src="Assets/saksa.jpg" 
+                                     alt="Writing" loading="lazy" width="400" height="300">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Step 3: Cipta Cerpen & Puisi -->
+                <article class="process-step" data-aos="fade-right">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Cipta Cerpen & Puisi</h3>
+                        <p>Kompetisi cipta karya sastra yang berfokus pada orisinalitas ide, alur naratif, dan kedalaman pesan untuk cerpen, serta kreativitas bahasa untuk puisi. Karya akan dinilai oleh tim juri yang terdiri dari sastrawan dan ahli bahasa.</p>
+                        <div class="step-requirements">
+                            <h4>Persyaratan:</h4>
+                            <ul>
+                                <li>Tema "Mengembalikan Nada Nusantara" dengan format standar</li>
+                                <li>Cerpen minimal 1000 - 2500 kata</li>
+                                <li>Puisi minimal 2 - 5 bait</li>
+                                <li>Karya orisinal</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="step-images">
+                            <div class="step-image">
+                                <img src="Assets/saksa.jpg" 
+                                     alt="Writing Workshop" loading="lazy" width="400" height="300">
+                            </div>
+                            <div class="step-image">
+                                <img src="Assets/saksa.jpg" 
+                                     alt="Literature" loading="lazy" width="400" height="300">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <!-- Tombol Aksi -->
+            <div class="juknis-ref-action">
+                <a href="https://drive.google.com/file/d/11qpRnsdY_xMjBtXbS8ztg3SJ5v39Z0dP/view" 
+                   target="_blank" rel="noopener noreferrer" class="btn-primary" data-aos="fade-up">
+                    <span class="btn-text">LIHAT JUKNIS LENGKAP</span>
+                    <span class="btn-fill"></span>
+                    <i class="fas fa-download btn-icon"></i>
+                </a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRGxZCqWz974NGdy13WUiQNd2EVRNXGTm7j17jfOJpITjw-A/viewform" 
+                   target="_blank" rel="noopener noreferrer" class="btn-secondary" data-aos="fade-up" data-aos-delay="100">
+                    <span class="btn-text">DAFTAR SEKARANG</span>
+                    <span class="btn-glow"></span>
+                    <i class="fas fa-arrow-right btn-icon"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri Section -->
+    <section id="galeri" class="section gallery-section" aria-labelledby="galeri-title">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">GALERI</span>
+                <h2 class="section-title" id="galeri-title">MOMEN SPESIAL</h2>
+                <p class="section-subtitle">Momen-momen spesial dari acara Saksarata sebelumnya</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <figure class="gallery-item" data-index="0" data-category="performance">
+                    <div class="gallery-img-wrapper">
+                        <img src="Assets/PenampilanPG.PNG" 
+                             alt="Festival Band 2024" loading="lazy" width="800" height="600">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h4>Good Memories in 2024</h4>
+                                <p>Penampilan yang menciptakan momen-momen indah</p>
+                                <div class="gallery-date">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>10 Oktober 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+                
+                <!-- Gallery Item 2 -->
+                <figure class="gallery-item" data-index="1" data-category="performance">
+                    <div class="gallery-img-wrapper">
+                        <img src="Assets/guest.PNG" 
+                             alt="Guest Star" loading="lazy" width="800" height="600">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h4>Guest Star 2024</h4>
+                                <p>Penampilan yang memukau dari Guest Star</p>
+                                <div class="gallery-date">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>10 Oktober 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+                
+                <!-- Gallery Item 3 -->
+                <figure class="gallery-item" data-index="2" data-category="performance">
+                    <div class="gallery-img-wrapper">
+                        <img src="Assets/bsndtrok.PNG" 
+                             alt="Festival Band 2024" loading="lazy" width="800" height="600">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h4>Festival Band 2024</h4>
+                                <p>Penampilan band-band sekolah se-Bandung</p>
+                                <div class="gallery-date">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>10 Oktober 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+                
+                <!-- Gallery Item 4 -->
+                <figure class="gallery-item" data-index="3" data-category="award">
+                    <div class="gallery-img-wrapper">
+                        <img src="Assets/penyerahan.PNG" 
+                             alt="Penyerahan Hadiah" loading="lazy" width="800" height="600">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h4>Penyerahan Hadiah</h4>
+                                <p>Apresiasi untuk para pemenang kompetisi</p>
+                                <div class="gallery-date">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>10 Oktober 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+                
+                <!-- Gallery Item 5 -->
+                <figure class="gallery-item" data-index="4" data-category="workshop">
+                    <div class="gallery-img-wrapper">
+                        <img src="Assets/siswa.PNG" 
+                             alt="Workshop Literasi" loading="lazy" width="800" height="600">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h4>Penampilan Siswa</h4>
+                                <p>Penampilan dari para siswa berbakat</p>
+                                <div class="gallery-date">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>10 Oktober 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+                
+                <!-- Gallery Item 6 -->
+                <figure class="gallery-item" data-index="5" data-category="crowd">
+                    <div class="gallery-img-wrapper">
+                        <img src="Assets/meriah.jpg" 
+                             alt="Antusiasme Penonton" loading="lazy" width="800" height="600">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h4>Antusiasme Penonton</h4>
+                                <p>Suasana meriah penonton Saksarata</p>
+                                <div class="gallery-date">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>10 Oktober 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+            
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-card" data-aos="fade-up">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-count="500">0</div>
+                    <div class="stat-label">Partisipan</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label">Karya Dipamerkan</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-number" data-count="48">0</div>
+                    <div class="stat-label">Jam Acara</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-number" data-count="5">0</div>
+                    <div class="stat-label">Jenis Lomba</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak" class="main-footer" aria-labelledby="footer-title">
+        <div class="footer-marquee" aria-hidden="true">
+            <span>SAKSARATA TELERONA • THE LOST RYTHM OF NUSANTARA • SAKSARATA TELERONA •</span>
+        </div>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h2 class="gradient-text" id="footer-title">SAKSARATA</h2>
+                <p>Perpaduan harmonis antara musik dan literasi dalam sebuah perayaan kreativitas dan pengetahuan.<br>Bandung, Indonesia.</p>
+                
+                <div class="countdown-wrap">
+                    <h5>MENGHITUNG HARI:</h5>
+                    <div class="countdown">
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="days">00</span>
+                            <span class="countdown-label">Hari</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="hours">00</span>
+                            <span class="countdown-label">Jam</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="minutes">00</span>
+                            <span class="countdown-label">Menit</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="seconds">00</span>
+                            <span class="countdown-label">Detik</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Social Media -->
+                <div class="footer-social">
+                    <a href="https://instagram.com/saksarata" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram SAKSARATA">
+                        <i class="fab fa-instagram"></i>
+                        <span class="social-tooltip">Instagram</span>
+                    </a>
+                    <a href="https://www.tiktok.com/@saksarata" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok SAKSARATA">
+                        <i class="fab fa-tiktok"></i>
+                        <span class="social-tooltip">TikTok</span>
+                    </a>
+                    </a>
+                    <a href="mailto:saksarata23@gmail.com" class="social-btn" aria-label="Email SAKSARATA">
+                        <i class="fas fa-envelope"></i>
+                        <span class="social-tooltip">Email</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Navigasi</h4>
+                    <a href="#home">Beranda</a>
+                    <a href="#tentang">Tentang</a>
+                    <a href="#acara">Acara</a>
+                    <a href="#guest-star">Guest Star</a>
+                    <a href="#juknis">Juknis</a>
+                    <a href="#galeri">Galeri</a>
+                </div>
+                
+                <div class="link-group">
+                    <h4>Sponsor & Partner</h4>
+                    <div class="sponsor-logos">
+                        <div class="sponsor-logo">SMAN 23</div>
+                        <div class="sponsor-logo">Coming Soon...</div>
+                    </div>
+                </div>
+                
+                <div class="link-group">
+                    <h4>Kontak & Lokasi</h4>
+                    <p><i class="fas fa-school" aria-hidden="true"></i> SMAN 23 Bandung</p>
+                    <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Jl. Malangbong Raya, Antapani Wetan</p>
+                    <p>Kecamatan Antapani, Kota Bandung</p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> saksarata23@gmail.com</p>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> +62 878-8007-9437</p>
+                    
+                    <!-- Map Trigger -->
+                    <button class="footer-map-trigger" id="mapTrigger" aria-label="Lihat peta lokasi">
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        <span>Lihat Peta Lokasi</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2026 SAKSARATA : TELERONA. Festival Musikaliterasi Sekolah. All Rights Reserved.</p>
+            <div class="footer-credits">
+                <span>Made with <i class="fas fa-heart"></i> by SAKSARATA Team</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption" aria-hidden="true">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose" aria-label="Tutup lightbox">&times;</button>
+            <div class="lightbox-image-container">
+                <img src="" alt="" class="lightbox-image" id="lightboxImage">
+            </div>
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+            <div class="lightbox-info">
+                <span class="lightbox-index" id="lightboxIndex">1/6</span>
+                <span class="lightbox-category" id="lightboxCategory">Performance</span>
+            </div>
+            <div class="lightbox-nav">
+                <button class="lightbox-prev" id="lightboxPrev" aria-label="Gambar sebelumnya">&larr;</button>
+                <button class="lightbox-next" id="lightboxNext" aria-label="Gambar selanjutnya">&rarr;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map Modal -->
+    <div class="map-modal" id="mapModal" role="dialog" aria-modal="true" aria-labelledby="map-modal-title" aria-hidden="true">
+        <div class="map-modal-content">
+            <button class="map-modal-close" id="mapModalClose" aria-label="Tutup peta">&times;</button>
+            <div class="map-modal-header">
+                <h3 id="map-modal-title">Lokasi SAKSARATA TELERONA</h3>
+                <p>SMAN 23 Bandung - Jl. Malangbong Raya, Antapani Wetan, Bandung</p>
+            </div>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.814687155486!2d107.66232357504376!3d-6.912747793086754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7f7bae7fbd5%3A0x726c4ca7c82a3690!2sSenior%20High%20School%2023%20Bandung!5e0!3m2!1sen!2sid!4v1768495607198!5m2!1sen!2sid" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Peta Lokasi SMAN 23 Bandung"
+                    id="mapIframe">
+                </iframe>
+            </div>
+            <div class="map-instructions">
+                <h4>Petunjuk Lokasi:</h4>
+                <ul>
+                    <li><i class="fas fa-bus"></i> Akses mudah dengan angkutan umum</li>
+                    <li><i class="fas fa-walking"></i> 5 menit dari Arcamanik</li>
+                    <li><i class="fas fa-car"></i> Parkir tersedia di area sekolah</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="SakVer2.js"></script>
+</body>
+</html>
